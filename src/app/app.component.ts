@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
     try{
       const data = this.weatherService.getWeatherData(cityName)
       .subscribe((response) =>{
+        
           this.weatherData = response
           this.max = this.getConverterTemp(Number(this.weatherData?.main.temp_max))
           this.min = this.getConverterTemp(Number(this.weatherData?.main.temp_min))
